@@ -111,3 +111,16 @@ print('Value of R^ as ', R_r)
 # Find Se
 Se = math.sqrt(SSR/len(x) - 2)
 print('Value of Se ', round(Se, 2))
+# Transform Data
+# Find X^
+# X^ = A-Y^/b
+X_bar = []
+for i in Round_Y_hat:
+    X_bar = (A - Round_Y_hat)/b
+
+Round_X_bar = [round(num, 2) for num in X_bar]
+print('Value of Transforming X^ For Analysis Graph')
+print(Round_X_bar)
+# Floating Graph
+plt.scatter(Round_X_bar, Round_Y_hat)
+plt.show()
